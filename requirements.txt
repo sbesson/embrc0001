@@ -1,0 +1,2 @@
+zeroc-ice==3.6.3
+omero-metadata==0.2.2
