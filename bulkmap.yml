@@ -61,3 +61,13 @@ columns:
         - name: Gene name analyzed
           clientname: Gene Symbol
           include: yes
+
+advanced:
+  ignore_missing_primary_key: yes
+  primary_group_keys:
+    - namespace: openmicroscopy.org/mapr/organism
+      keys:
+        - Organism
+    - namespace: openmicroscopy.org/mapr/gene
+      keys:
+        - Gene Symbol
