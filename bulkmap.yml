@@ -61,6 +61,14 @@ columns:
         - name: Gene name analyzed
           clientname: Gene Symbol
           include: yes
+        - name: Gene ID
+          clientname: Gene Identifier
+          include: "yes"
+        - name: Gene ID
+          clientname: Gene Identifier URL
+          clientvalue: >
+            https://www.ncbi.nlm.nih.gov/nuccore/{{ value|urlencode }}
+          include: yes
 
 advanced:
   ignore_missing_primary_key: yes
@@ -71,3 +79,4 @@ advanced:
     - namespace: openmicroscopy.org/mapr/gene
       keys:
         - Gene Symbol
+        - Gene Identifier
