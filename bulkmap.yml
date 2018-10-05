@@ -27,18 +27,6 @@ columns:
   - name: Experimental approach (CV term)
     clientname: Experimental approach
     include: true
-  - name: Expression pattern
-    clientname: Expression pattern 1
-    include: true
-  - name: Expression pattern 2
-    clientname: Expression pattern 2
-    include: true
-  - name: Expression pattern 3
-    clientname: Expression pattern 3
-    include: true
-  - name: Expression pattern 4
-    clientname: Expression pattern 4
-    include: true
   - name: Embryo orientation
     clientname: Embryo orientation
     include: true
@@ -54,20 +42,49 @@ columns:
           clientname: Organism
           include: true
 
+  - group:
+      namespace: openmicroscopy.org/mapr/gene
+      columns:
+        - name: Gene 1 name analyzed
+          clientname: Gene Symbol
+          include: true
+        - name: Gene 1 ID
+          clientname: Gene Identifier
+          include: true
+        - name: Gene 1 ID
+          clientname: Gene Identifier URL
+          clientvalue: >
+            https://www.ncbi.nlm.nih.gov/nuccore/{{ value|urlencode }}
+          include: true
+        - name: Gene 1 Expression pattern 1
+          clientname: Gene Expression Pattern
+          include: true
+        - name: Gene 1 Expression pattern 2
+          clientname: Gene Expression Pattern
+          include: true
+        - name: Gene 1 Expression pattern 3
+          clientname: Gene Expression Pattern
+          include: true
+        - name: Gene 1 Expression pattern 4
+          clientname: Gene Expression Pattern
+          include: true
 
   - group:
       namespace: openmicroscopy.org/mapr/gene
       columns:
-        - name: Gene name analyzed
+        - name: Gene 2 name analyzed
           clientname: Gene Symbol
           include: true
-        - name: Gene ID
+        - name: Gene 2 ID
           clientname: Gene Identifier
           include: true
-        - name: Gene ID
+        - name: Gene 2 ID
           clientname: Gene Identifier URL
           clientvalue: >
             https://www.ncbi.nlm.nih.gov/nuccore/{{ value|urlencode }}
+          include: true
+        - name: Gene 2 Expression pattern 1
+          clientname: Gene Expression Pattern
           include: true
 
 advanced:
