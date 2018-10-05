@@ -4,7 +4,7 @@ version: 1
 
 defaults:
   # Should the column be processed when creating bulk-annotations (yes/no)
-  include: no
+  include: false
   # Columns type of the bulk-annotations column
   type: string
 
@@ -12,36 +12,36 @@ defaults:
   # White space will be stripped
   split: ;
   # Should this column be included in the clients (yes/no)
-  includeclient: yes
+  includeclient: true
   # Should this column be visible in the clients, if no the column should be
   # hidden in the client but will still be indexed by the searcher (yes/no)
-  visible: yes
+  visible: true
   # Should empty values be omitted from the client display
-  omitempty: yes
+  omitempty: true
 
 columns:
 
   - name: Developmental stage
     clientname: Developmental stage
-    include: yes
+    include: true
   - name: Experimental approach (CV term)
     clientname: Experimental approach
-    include: yes
+    include: true
   - name: Expression pattern
     clientname: Expression pattern 1
-    include: yes
+    include: true
   - name: Expression pattern 2
     clientname: Expression pattern 2
-    include: yes
+    include: true
   - name: Expression pattern 3
     clientname: Expression pattern 3
-    include: yes
+    include: true
   - name: Expression pattern 4
     clientname: Expression pattern 4
-    include: yes
+    include: true
   - name: Embryo orientation
     clientname: Embryo orientation
-    include: yes
+    include: true
 
   ######################################################################
   # mapr groups
@@ -52,7 +52,7 @@ columns:
       columns:
         - name: Specie
           clientname: Organism
-          include: yes
+          include: true
 
 
   - group:
@@ -60,18 +60,18 @@ columns:
       columns:
         - name: Gene name analyzed
           clientname: Gene Symbol
-          include: yes
+          include: true
         - name: Gene ID
           clientname: Gene Identifier
-          include: "yes"
+          include: true
         - name: Gene ID
           clientname: Gene Identifier URL
           clientvalue: >
             https://www.ncbi.nlm.nih.gov/nuccore/{{ value|urlencode }}
-          include: yes
+          include: true
 
 advanced:
-  ignore_missing_primary_key: yes
+  ignore_missing_primary_key: true
   primary_group_keys:
     - namespace: openmicroscopy.org/mapr/organism
       keys:
