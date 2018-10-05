@@ -97,3 +97,4 @@ advanced:
       keys:
         - Gene Symbol
         - Gene Identifier
+        - Gene Expression Pattern
